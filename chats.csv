@@ -1,0 +1,13 @@
+intent,user_input,entity_name,entity_value,action,bot_reply
+greet,hi,,,utter_enquire_sl,Do you have a current security license?
+affirm,/affirm,,,utter_first_aid,Do you have a current first aid certificate?
+affirm,/affirm,,,utter_enquire_worked_before,Have you applied, interviewed or worked for Wilson, either directly or as a sub contractor?
+affirm,/affirm,,,utter_work_preference,What is you work preference?
+either,/either,,,utter_availability_next_week,Are you available for interview next week with the operations team?
+affirm,/affirm,,,utter_goodbye,Thank you for answering the questions, our recruiter will soon connect with you
+greet,hi,,,utter_enquire_sl,Do you have a current security license?
+affirm,/affirm,,,utter_first_aid,Do you have a current first aid certificate?
+affirm,/affirm,,,utter_enquire_worked_before,Have you applied, interviewed or worked for Wilson, either directly or as a sub contractor?
+affirm,/affirm,,,utter_work_preference,What is you work preference?
+either,/either,,,utter_availability_next_week,Are you available for interview next week with the operations team?
+affirm,/affirm,,,utter_goodbye,Thank you for answering the questions, our recruiter will soon connect with you

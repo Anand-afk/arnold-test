@@ -1,0 +1,80 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- either:
+    use_entities: true
+- full_time:
+    use_entities: true
+- casual:
+    use_entities: true
+entities: []
+slots:
+  securityLicense:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+responses:
+  utter_work_preference:
+  - buttons:
+    - payload: /full_time
+      title: Full time
+    - payload: /casual
+      title: Casual
+    - payload: /either
+      title: Either
+    text: What is you work preference?
+  utter_first_aid:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Do you have a current first aid certificate?
+  utter_availability_next_week:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Are you available for interview next week with the operations team?
+  utter_greet:
+  - text: Hello Good morning, I am a Arnold-Group Chatbot and I will be asking you few questions to speed up the interview process.
+  utter_enquire_sl:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Do you have a current security license?
+  utter_enquire_worked_before:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Have you applied, interviewed or worked for Wilson, either directly or as a sub contractor?
+  utter_goodbye:
+  - text: Thank you for answering the questions, our recruiter will soon connect with you
+actions:
+- action_save_conversation
+forms: {}
+e2e_actions: []

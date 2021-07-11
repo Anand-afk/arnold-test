@@ -1,0 +1,7 @@
+Bot,User
+,greet
+Do you have a current security license?,affirm
+Do you have a current first aid certificate?,affirm
+"Have you applied, interviewed or worked for Wilson, either directly or as a sub contractor?",affirm
+What is you work preference?,either
+Are you available for interview next week with the operations team?,affirm
