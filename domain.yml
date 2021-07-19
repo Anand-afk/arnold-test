@@ -57,7 +57,7 @@ responses:
     text: Are you available to work on weekends, night shifts, holidays?
   
   utter_greet:
-  - text: Hello Good morning, I am a Arnold-Group Chatbot and I will be asking you few questions to speed up the interview process.
+  - text: Hello, welcome to Wilson People. We need you to provide us some more information about you to proceed ahead with your job application.
   
   utter_enquire_sl:
   - buttons:

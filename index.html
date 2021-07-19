@@ -12,28 +12,20 @@
       />
      </a>
     </div>
-<script>!(function () {
-  let e = document.createElement("script"),
-    t = document.head || document.getElementsByTagName("head")[0];
-  (e.src =
-    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
-    // Replace 1.x.x with the version that you want
-    (e.async = !0),
-    (e.onload = () => {
-      window.WebChat.default(
-        {
-          customData: { language: "en" },
-          socketUrl: "http://34.129.79.51",
-          
-        },
-        null
-      );
-    }),
-    t.insertBefore(e, t.firstChild);
-})();
+	<div id="webchat"></div> 
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.5.0/lib/index.min.js"></script>
+
+<script>   
+WebChat.default.init({  
+initPayload: "/greet",
+selector: "#webchat",          
+customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket     
+socketUrl: "http://34.129.79.51",     
+socketPath: "/socket.io/",     
+title: "Arnold Group",     
+subtitle: "Pre-screening Bot",     
+params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.   
+}) 
 </script>
 </body>
 </html>
-
-
-
