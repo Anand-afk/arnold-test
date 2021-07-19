@@ -5,7 +5,6 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-
 - greet:
     use_entities: true
 - goodbye:
@@ -27,6 +26,8 @@ intents:
 - casual:
     use_entities: true
 - upload:
+    use_entities: true
+- visa:
     use_entities: true
 entities: []
 slots:
@@ -128,7 +129,8 @@ responses:
       title: No
     text: Do you have a vehicle?
 
-  
+  utter_enquire_visa:
+  - text: What is your visa status? Enter your response in the below field and click next
 
 actions:
 - action_save_conversation
