@@ -69,3 +69,14 @@ nlu:
     - no way
     - not really
 
+- intent: visa
+  examples: |
+    - 485 visa
+    - graduate visa
+    - permanent resident
+    - PR
+    - student visa
+    - subclass 500
+    - subclass 485
+    - bridging visa
+    

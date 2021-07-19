@@ -10,16 +10,23 @@ stories:
   - intent: upload
   - action: utter_enquire_aus_citizen
   - intent: affirm
+  - action: utter_passport_copy
+  - intent: upload
+  - action: utter_first_aid
+  - intent: upload
+  - action: utter_wwcc
+  - intent: upload
+  - action: utter_driving_license
+  - intent: upload
+  - action: utter_vehicle
+  - intent: affirm
+  - action: utter_enquire_worked_before
+  - intent: affirm
+  - action: utter_work_preference
+  - intent: either
+  - action: utter_availability
+  - intent: affirm
   - action: utter_goodbye
-  # - action: utter_first_aid
-  # - intent: affirm
-  # - action: utter_enquire_worked_before
-  # - intent: affirm
-  # - action: utter_work_preference
-  # - intent: either
-  # - action: utter_availability_next_week
-  # - intent: affirm
-  # - action: utter_goodbye
   # - action: action_save_conversation
 
 - story: sad path sl
@@ -27,5 +34,19 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_enquire_sl
+  - intent: deny
+  - action: utter_missing_doc_bye
+
+- story: sad path first aid
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_enquire_sl
+  - intent: upload
+  - action: utter_enquire_aus_citizen
+  - intent: deny
+  - action: utter_enquire_visa
+  - intent: visa
+  - action: utter_first_aid
   - intent: deny
   - action: utter_missing_doc_bye

@@ -45,22 +45,19 @@ responses:
     - payload: /either
       title: Either
     text: What is you work preference?
-  utter_first_aid:
+ 
+
+  utter_availability:
   - buttons:
     - payload: /affirm
       title: Yes
     - payload: /deny
       title: No
-    text: Do you have a current first aid certificate?
-  utter_availability_next_week:
-  - buttons:
-    - payload: /affirm
-      title: Yes
-    - payload: /deny
-      title: No
-    text: Are you available for interview next week with the operations team?
+    text: Are you available to work on weekends, night shifts, holidays?
+  
   utter_greet:
   - text: Hello Good morning, I am a Arnold-Group Chatbot and I will be asking you few questions to speed up the interview process.
+  
   utter_enquire_sl:
   - buttons:
     - payload: /upload
@@ -90,6 +87,48 @@ responses:
     - payload: /deny
       title: No
     text: Are you an Australian citizen?
+  
+  utter_passport_copy:
+  - buttons:
+    - payload: /upload
+      title: Upload
+    - payload: /deny
+      title: I do not have one
+    text: Please upload your passport copy here?
+
+  utter_first_aid:
+  - buttons:
+    - payload: /upload
+      title: Upload
+    - payload: /deny
+      title: I do not have one
+    text: Upload your current First Aid Certificate?
+  
+  utter_wwcc:
+  - buttons:
+    - payload: /upload
+      title: Upload
+    - payload: /deny
+      title: I do not have one
+    text: Upload your Working with children check?
+  
+  utter_driving_license:
+  - buttons:
+    - payload: /upload
+      title: Upload
+    - payload: /deny
+      title: I do not have one
+    text: Upload the copy of your Driving license?
+
+  utter_vehicle:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Do you have a vehicle?
+
+  
 
 actions:
 - action_save_conversation
