@@ -5,9 +5,12 @@ stories:
 - story: happy path
   steps:
   - intent: greet
-  - action: action_save_conversation
-  # - action: utter_enquire_sl
-  # - intent: affirm
+  - action: utter_greet
+  - action: utter_enquire_sl
+  - intent: upload
+  - action: utter_enquire_aus_citizen
+  - intent: affirm
+  - action: utter_goodbye
   # - action: utter_first_aid
   # - intent: affirm
   # - action: utter_enquire_worked_before
@@ -18,3 +21,11 @@ stories:
   # - intent: affirm
   # - action: utter_goodbye
   # - action: action_save_conversation
+
+- story: sad path sl
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_enquire_sl
+  - intent: deny
+  - action: utter_missing_doc_bye

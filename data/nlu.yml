@@ -54,6 +54,11 @@ nlu:
     - that sounds good
     - correct
 
+- intent: upload
+  examples: |
+    - upload
+    - want to add docs
+    
 - intent: deny
   examples: |
     - no

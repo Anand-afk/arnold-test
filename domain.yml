@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+
 - greet:
     use_entities: true
 - goodbye:
@@ -24,6 +25,8 @@ intents:
 - full_time:
     use_entities: true
 - casual:
+    use_entities: true
+- upload:
     use_entities: true
 entities: []
 slots:
@@ -60,11 +63,12 @@ responses:
   - text: Hello Good morning, I am a Arnold-Group Chatbot and I will be asking you few questions to speed up the interview process.
   utter_enquire_sl:
   - buttons:
-    - payload: /affirm
-      title: Yes
+    - payload: /upload
+      title: Upload
     - payload: /deny
-      title: No
-    text: Do you have a current security license?
+      title: I do not have one
+    text: Please upload a copy of your current security license. Click on "Upload" button to upload the document, click on "I do not have one" otherwise?
+  
   utter_enquire_worked_before:
   - buttons:
     - payload: /affirm
@@ -72,8 +76,21 @@ responses:
     - payload: /deny
       title: No
     text: Have you applied, interviewed or worked for Wilson, either directly or as a sub contractor?
+
   utter_goodbye:
   - text: Thank you for answering the questions, our recruiter will soon connect with you
+
+  utter_missing_doc_bye:
+  - text: Thank you for your response. You can now close the window.
+
+  utter_enquire_aus_citizen:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Are you an Australian citizen?
+
 actions:
 - action_save_conversation
 forms: {}
